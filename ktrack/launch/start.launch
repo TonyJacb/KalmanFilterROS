@@ -1,0 +1,12 @@
+<launch>
+    <include file="$(find ros_yolo)/launch/model.launch"/>
+    <include file="$(find ros_midas)/launch/model.launch"/>
+    <!-- <node name="flow"
+            pkg="ros_opticflow"
+            type="flow.py"
+            output="screen"/> -->
+    <node name="ktrack"
+            pkg="ktrack"
+            type="track.py"
+            output="screen"/>
+</launch>
